@@ -51,4 +51,12 @@ public class OrderService {
     public void addAddress(String address, String oid) {
         orderDao.addAddress(address, oid);
     }
+
+    public List<Order> loadOrdersByState(int state) {
+        return orderDao.findByState(state);
+    }
+
+    public List<Order> loadAllOrders() {
+        return orderDao.findAll();
+    }
 }

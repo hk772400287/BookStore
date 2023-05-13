@@ -22,17 +22,17 @@ function load() {
 	bar1.colorStyle = 2;
 	bar1.config.imgDir = "<c:url value='/menu/img/'/>";
 	bar1.config.radioButton=false;
-	bar1.add("分类管理", "查看分类", "<c:url value='/adminjsps/admin/category/list.jsp'/>", "body");
+	bar1.add("分类管理", "查看分类", "<c:url value='/admin/AdminCategoryServlet?method=findAll'/>", "body");
 	bar1.add("分类管理", "添加分类", "<c:url value='/adminjsps/admin/category/add.jsp'/>", "body");
 
-	bar1.add("图书管理", "查看图书", "<c:url value='/adminjsps/admin/book/list.jsp'/>", "body");
-	bar1.add("图书管理", "添加图书", "<c:url value='/adminjsps/admin/book/add.jsp'/>", "body");
+	bar1.add("图书管理", "查看图书", "<c:url value='/admin/AdminBookServlet?method=findAll'/>", "body");
+	bar1.add("图书管理", "添加图书", "<c:url value='/admin/AdminBookServlet?method=addpre'/>", "body");
 
-	bar1.add("订单管理", "所有订单", "<c:url value='/adminjsps/admin/order/list.jsp'/>", "body");
-	bar1.add("订单管理", "未付款订单", "<c:url value='/adminjsps/admin/order/list.jsp'/>", "body");
-	bar1.add("订单管理", "已付款订单", "<c:url value='/adminjsps/admin/order/list.jsp'/>", "body");
-	bar1.add("订单管理", "未收货订单", "<c:url value='/adminjsps/admin/order/list.jsp'/>", "body");
-	bar1.add("订单管理", "已完成订单", "<c:url value='/adminjsps/admin/order/list.jsp'/>", "body");
+	bar1.add("订单管理", "所有订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=0'/>", "body");
+	bar1.add("订单管理", "未付款订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=1'/>", "body");
+	bar1.add("订单管理", "已付款订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=2'/>", "body");
+	bar1.add("订单管理", "未收货订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=3'/>", "body");
+	bar1.add("订单管理", "已完成订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=4'/>", "body");
 
 	var d = document.getElementById("menu");
 	d.innerHTML = bar1.toString();

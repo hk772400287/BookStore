@@ -121,4 +121,30 @@ public class OrderDao {
             throw new RuntimeException(e);
         }
     }
+
+    public List<Order> findByState(int state) {
+        String sql = "SELECT * FROM orders WHERE state=?";
+        try {
+            List<Order> orderList = qr.query(sql, new BeanListHandler<>(Order.class), state);
+            for (Order o : orderList) {
+                o.setOrderItemList(getOrderItemList(o));
+            }
+            return orderList;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Order> findAll() {
+        String sql = "SELECT * FROM orders";
+        try {
+            List<Order> orderList = qr.query(sql, new BeanListHandler<>(Order.class));
+            for (Order o : orderList) {
+                o.setOrderItemList(getOrderItemList(o));
+            }
+            return orderList;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
