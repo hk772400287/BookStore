@@ -9,11 +9,11 @@ public class UserService {
     public void userRegister(User user) throws UserException {
         User found = userDao.findByUsername(user.getUsername());
         if (found != null) {
-            throw new UserException("用户名已被注册");
+            throw new UserException("Username already exists");
         }
         found = userDao.findByEmail(user.getEmail());
         if (found != null) {
-            throw new UserException("email已被注册");
+            throw new UserException("Email already registered");
         }
         userDao.addUser(user);
     }
@@ -21,10 +21,10 @@ public class UserService {
     public User userLogin(User user) throws UserException {
         User found = userDao.findByUsername(user.getUsername());
         if (found == null) {
-            throw new UserException("用户名不存在！");
+            throw new UserException("Username does not exist！");
         }
         if (!found.getPassword().equals(user.getPassword())) {
-            throw new UserException("密码错误！");
+            throw new UserException("Incorrect password！");
         }
         return found;
     }

@@ -20,7 +20,7 @@
   
   <body>
 <h1>${msg }</h1>
-<a href="<c:url value='/index.jsp'/>">»Øµ½Ö÷Ò³</a>
+<a href="<c:url value='/index.jsp'/>">Go back to the homepage</a>
 <ul>
 <c:forEach items="${links }" var="link">
   <li>${link }</li>

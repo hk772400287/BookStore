@@ -27,11 +27,11 @@
 		.table{
 			width:1024px;
 			height:100%;
-			border:1px solid gray;/*固定边框,1像素*/
-		    border-collapse: collapse;/*单线的列表边框*/
+			border:1px solid gray;
+		    border-collapse: collapse;
 		}
 		.table td{
-			border:1px solid gray;/*固定边框,1像素*/
+			border:1px solid gray;
 		}
 		iframe {
 			width: 100%;

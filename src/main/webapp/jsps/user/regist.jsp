@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>注册</title>
+    <title>Sign Up</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,21 @@
   </head>
   
   <body>
-  <h1>注册</h1>
+  <h1>Sign Up</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/userServlet'/>" method="post">
 	<input type="hidden" name="method" value="register"/>
-	用户名：<input type="text" name="username" value="${form.username }"/>
+	Username：<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	密　码：<input type="password" name="password" value="${form.password }"/>
+	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	邮　箱：<input type="text" name="email" value="${form.email }"/>
+	Email：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="注册"/>
+	<br/>
+	<input type="submit" value="Create Account"/>
 </form>
   </body>
 </html>

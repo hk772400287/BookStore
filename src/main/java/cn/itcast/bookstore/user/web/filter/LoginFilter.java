@@ -24,7 +24,7 @@ public class LoginFilter implements Filter {
         if (user != null) {
             chain.doFilter(request, response);
         } else {
-            req.setAttribute("msg", "请先登录");
+            req.setAttribute("msg", "Please log in first");
             req.getRequestDispatcher("/jsps/user/login.jsp").forward(req, response);
         }
 

@@ -17,22 +17,22 @@
 	<script type="text/javascript" src="<c:url value='/menu/mymenu.js'/>"></script>
 	<link rel="stylesheet" href="<c:url value='/menu/mymenu.css'/>" type="text/css" media="all">
 <script language="javascript">
-var bar1 = new Q6MenuBar("bar1", "ITCAST网络图书商城");
+var bar1 = new Q6MenuBar("bar1", "CS BookStore");
 function load() {
 	bar1.colorStyle = 2;
 	bar1.config.imgDir = "<c:url value='/menu/img/'/>";
 	bar1.config.radioButton=false;
-	bar1.add("分类管理", "查看分类", "<c:url value='/admin/AdminCategoryServlet?method=findAll'/>", "body");
-	bar1.add("分类管理", "添加分类", "<c:url value='/adminjsps/admin/category/add.jsp'/>", "body");
+	bar1.add("Category Management", "View details", "<c:url value='/admin/AdminCategoryServlet?method=findAll'/>", "body");
+	bar1.add("Category Management", "Add a category", "<c:url value='/adminjsps/admin/category/add.jsp'/>", "body");
 
-	bar1.add("图书管理", "查看图书", "<c:url value='/admin/AdminBookServlet?method=findAll'/>", "body");
-	bar1.add("图书管理", "添加图书", "<c:url value='/admin/AdminBookServlet?method=addpre'/>", "body");
+	bar1.add("Books Management", "View details", "<c:url value='/admin/AdminBookServlet?method=findAll'/>", "body");
+	bar1.add("Books Management", "Add a book", "<c:url value='/admin/AdminBookServlet?method=addpre'/>", "body");
 
-	bar1.add("订单管理", "所有订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=0'/>", "body");
-	bar1.add("订单管理", "未付款订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=1'/>", "body");
-	bar1.add("订单管理", "已付款订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=2'/>", "body");
-	bar1.add("订单管理", "未收货订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=3'/>", "body");
-	bar1.add("订单管理", "已完成订单", "<c:url value='/admin/AdminOrderServlet?method=load&state=4'/>", "body");
+	bar1.add("Orders Management", "All", "<c:url value='/admin/AdminOrderServlet?method=load&state=0'/>", "body");
+	bar1.add("Orders Management", "Unpaid Orders", "<c:url value='/admin/AdminOrderServlet?method=load&state=1'/>", "body");
+	bar1.add("Orders Management", "Paid Orders", "<c:url value='/admin/AdminOrderServlet?method=load&state=2'/>", "body");
+	bar1.add("Orders Management", "Awaiting Delivery", "<c:url value='/admin/AdminOrderServlet?method=load&state=3'/>", "body");
+	bar1.add("Orders Management", "Completed", "<c:url value='/admin/AdminOrderServlet?method=load&state=4'/>", "body");
 
 	var d = document.getElementById("menu");
 	d.innerHTML = bar1.toString();

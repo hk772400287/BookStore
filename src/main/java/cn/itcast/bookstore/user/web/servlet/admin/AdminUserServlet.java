@@ -17,12 +17,12 @@ public class AdminUserServlet extends BaseServlet {
             throws IOException, ServletException {
         String name = request.getParameter("adminname");
         String pw = request.getParameter("password");
-        if(name.equals("admin") && pw.equals("12345")) {
+        if(name.equals("admin") && pw.equals("admin")) {
             HttpSession session = request.getSession();
             session.setAttribute("admin", name);
             return "f:/adminjsps/admin/main.jsp";
         } else {
-            request.setAttribute("msg", "您不是管理员");
+            request.setAttribute("msg", "You are not the administrator.");
             return "f:/adminjsps/login.jsp";
         }
 

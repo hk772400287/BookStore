@@ -31,18 +31,18 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">ITCAST书店</h1>
+<h1 style="text-align: center;">CS Book Store</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
-			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">登录</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">注册</a>
+			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">LOGIN</a> |&nbsp;
+			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">SIGN UP</a>
 		</c:when>
 		<c:otherwise>
-			您好：${sessionScope.session_user.username }&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/cart/list.jsp'/>" target="body">我的购物车</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/OrderServlet?method=myOrders'/>" target="body">我的订单</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/userServlet?method=logout'/>" target="_parent">退出</a>
+			Hello：${sessionScope.session_user.username }&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/cart/list.jsp'/>" target="body">My Shopping Cart</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<c:url value='/OrderServlet?method=myOrders'/>" target="body">My Orders</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<c:url value='/userServlet?method=logout'/>" target="_parent">Sign Out</a>
 		</c:otherwise>
 	</c:choose>
 </div>

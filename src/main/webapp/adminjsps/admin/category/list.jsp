@@ -4,7 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>分类列表</title>
+    <title>Category List</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,18 +22,18 @@
   </head>
   
   <body>
-    <h2 style="text-align: center;">分类列表</h2>
+    <h2 style="text-align: center;">Category List</h2>
     <table align="center" border="1" cellpadding="0" cellspacing="0">
     	<tr id="th" bordercolor="rgb(78,78,78)">
-    		<th>分类名称</th>
-    		<th>操作</th>
+    		<th>Category</th>
+    		<th>Operation</th>
     	</tr>
     <c:forEach items="${categoryList }" var="category">
 		<tr bordercolor="rgb(78,78,78)">
 			<td>${category.cname }</td>
 			<td>
-				<a href="<c:url value='/admin/AdminCategoryServlet?method=editpre&cid=${category.cid }'/>">修改</a> |
-				<a onclick="return confirm('确定删除？')" href="<c:url value='/admin/AdminCategoryServlet?method=delete&cid=${category.cid }'/>">删除</a>
+				<a href="<c:url value='/admin/AdminCategoryServlet?method=editpre&cid=${category.cid }'/>">Modify</a> |
+				<a onclick="return confirm('Confirm deletion？')" href="<c:url value='/admin/AdminCategoryServlet?method=delete&cid=${category.cid }'/>">Delete</a>
 			</td>
 		</tr>
 	</c:forEach>

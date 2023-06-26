@@ -29,21 +29,21 @@ public class UserServlet extends BaseServlet {
         Map<String, String> errormsg = new HashMap<>();
         String username = form.getUsername();
         if (username == null || username.trim().isEmpty()) {
-            errormsg.put("username", "用户名不能为空！");
+            errormsg.put("username", "Username cannot be empty！");
         } else if (username.length() < 3 || username.length() > 10) {
-            errormsg.put("username", "用户名长度必须在3-10之间！");
+            errormsg.put("username", "Username must be between 3-10 characters long！");
         }
         String password = form.getPassword();
         if (password == null || password.trim().isEmpty()) {
-            errormsg.put("password", "密码不能为空！");
+            errormsg.put("password", "Password cannot be empty！");
         } else if (password.length() < 3 || password.length() > 10) {
-            errormsg.put("password", "密码长度必须在3-10之间！");
+            errormsg.put("password", "Password must be between 3-10 characters long！");
         }
         String email = form.getEmail();
         if (email == null || email.trim().isEmpty()) {
-            errormsg.put("email", "email不能为空！");
+            errormsg.put("email", "Email cannot be empty！");
         } else if (email.matches("\\w+@\\w+")) {
-            errormsg.put("email", "email格式错误！");
+            errormsg.put("email", "Invalid email format！");
         }
 
         if (errormsg.size() > 0) {
@@ -59,7 +59,7 @@ public class UserServlet extends BaseServlet {
             request.setAttribute("form", form);
             return "f:/jsps/user/regist.jsp";
         }
-        request.setAttribute("msg", "注册成功！");
+        request.setAttribute("msg", "Registration successful！");
         return "f:/jsps/msg.jsp";
     }
 

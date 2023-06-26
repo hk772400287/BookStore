@@ -4,7 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>修改分类</title>
+    <title>Modify Category</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,11 +20,11 @@
   </head>
   
   <body>
-    <h1>修改分类</h1>
+    <h1>Modify Category</h1>
     <form action="<c:url value='/admin/AdminCategoryServlet'/>" method="post">
     	<input type="hidden" name="cid" value="${category.cid }" />
         <input type="hidden" name="method" value="edit" />
-    	分类名称：<input type="text" name="cname" value="${category.cname }"/>
+    	Category：<input type="text" name="cname" value="${category.cname }"/>
     	<input type="submit" value="修改分类"/>
     </form>
   </body>

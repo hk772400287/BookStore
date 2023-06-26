@@ -22,6 +22,6 @@
   </head>
   
   <body>
-    <h1>欢迎，欢迎！热烈欢迎！</h1>
+    <h1>Welcome to CS Book Store!</h1>
   </body>
 </html>

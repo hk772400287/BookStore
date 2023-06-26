@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>图书详细</title>
+    <title>Book details</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -56,9 +56,9 @@
     <img src="<c:url value='/${book.image }'/>" border="0"/>
   </div>
   <ul>
-    <li>书名：${book.bname }</li>
-    <li>作者：${book.author }</li>
-    <li>单价：${book.price }元</li>
+    <li>Title：${book.bname }</li>
+    <li>Writer：${book.author }</li>
+    <li>Price：${book.price }￥</li>
   </ul>
   <form id="form" action="<c:url value='/CartServlet'/>" method="post">
       <input type="text" size="3" name="count" value="1"/>

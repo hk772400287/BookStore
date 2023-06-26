@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>登录</title>
+    <title>Login</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>登录</h1>
+  <h1>Login</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/userServlet'/>" method="post" target="_top">
 	<input type="hidden" name="method" value="login"/>
-	用户名：<input type="text" name="username" value="${form.username }"/><br/>
-	密　码：<input type="password" name="password" value="${form.password }"/><br/>
-	<input type="submit" value="登录"/>
+	Username：<input type="text" name="username" value="${form.username }"/><br/>
+	Password：<input type="password" name="password" value="${form.password }"/><br/>
+	<input type="submit" value="Sign in"/>
 </form>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>删除分类</title>
+    <title>Delete Category</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,11 +20,11 @@
   </head>
   
   <body>
-    <h1>删除分类</h1>
-    <form action="javascript:alert('删除分类成功！');" method="post">
+    <h1>Delete Category</h1>
+    <form action="javascript:alert('Deletion successful！');" method="post">
     	<input type="hidden" name="cid" value="" />
-    	分类名称：<input type="text" name="cname" value="JavaSE分类" disabled="disabled"/>
-    	<input type="submit" value="删除分类"/>
+    	Category：<input type="text" name="cname" value="JavaSE" disabled="disabled"/>
+    	<input type="submit" value="Delete category"/>
     </form>
   </body>
 </html>

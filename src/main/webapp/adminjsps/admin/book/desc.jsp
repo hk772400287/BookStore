@@ -48,16 +48,16 @@
   	<input type="hidden" name="method" value="" id="method"/>
     <input type="hidden" name="bid" value="${book.bid }"/>
 	  <input type="hidden" name="image" value="${book.image }"/>
-	  图书名称：<input type="text" name="bname" value="${book.bname }"/><br/>
-  	图书单价：<input type="text" name="price" value="${book.price }"/>元<br/>
-  	图书作者：<input type="text" name="author" value="${book.author }"/><br/>
-  	图书分类：<select style="width: 150px; height: 20px;" name="cid">
+	  Title：<input type="text" name="bname" value="${book.bname }"/><br/>
+  	Price：<input type="text" name="price" value="${book.price }"/>￥<br/>
+  	Author：<input type="text" name="author" value="${book.author }"/><br/>
+  	Category：<select style="width: 150px; height: 20px;" name="cid">
 	  <c:forEach items="${categoryList }" var="c">
 		  <option value="${c.cid }" <c:if test="${c.cid eq book.category.cid }">selected="selected"</c:if> >${c.cname }</option>
 	  </c:forEach>
     	</select><br/>
-  	<input type="submit" value="删除" onclick="setMethod('delete')"/>
-  	<input type="submit" value="修改" onclick="setMethod('edit')"/>
+  	<input type="submit" value="Delete" onclick="setMethod('delete')"/>
+  	<input type="submit" value="Modify" onclick="setMethod('edit')"/>
   </form>
   </body>
 </html>
