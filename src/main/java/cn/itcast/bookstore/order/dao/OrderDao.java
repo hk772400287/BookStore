@@ -47,7 +47,7 @@ public class OrderDao {
     }
 
     public List<Order> findByUid(String uid) {
-        String sql = "SELECT * FROM orders WHERE uid=?";
+        String sql = "SELECT * FROM orders WHERE uid=? ORDER BY ordertime DESC";
         try {
             List<Order> orderList = qr.query(sql, new BeanListHandler<Order>(Order.class), uid);
             for (Order order : orderList) {
@@ -123,7 +123,7 @@ public class OrderDao {
     }
 
     public List<Order> findByState(int state) {
-        String sql = "SELECT * FROM orders WHERE state=?";
+        String sql = "SELECT * FROM orders WHERE state=? ORDER BY ordertime DESC";
         try {
             List<Order> orderList = qr.query(sql, new BeanListHandler<>(Order.class), state);
             for (Order o : orderList) {
@@ -136,7 +136,7 @@ public class OrderDao {
     }
 
     public List<Order> findAll() {
-        String sql = "SELECT * FROM orders";
+        String sql = "SELECT * FROM orders ORDER BY ordertime DESC";
         try {
             List<Order> orderList = qr.query(sql, new BeanListHandler<>(Order.class));
             for (Order o : orderList) {
