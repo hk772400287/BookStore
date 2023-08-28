@@ -72,7 +72,7 @@ public class OrderServlet extends BaseServlet {
         String oid = (String)request.getParameter("oid");
         try {
             orderService.confirm(oid);
-            request.setAttribute("msg", "交易成功！");
+            request.setAttribute("msg", "successfully！");
         } catch (OrderException e) {
             request.setAttribute("msg", e.getMessage());
         }
@@ -85,7 +85,7 @@ public class OrderServlet extends BaseServlet {
         String address = request.getParameter("address");
         orderService.addAddress(address, oid);
         orderService.pay(oid);
-        request.setAttribute("msg", "支付成功！");
+        request.setAttribute("msg", "Payed successfully！");
         return "f:/jsps/order/msg.jsp";
     }
 }
