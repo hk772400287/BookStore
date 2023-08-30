@@ -56,7 +56,7 @@ public class AdminBookServlet extends BaseServlet {
         bookService.add(book);
         File imageFile = new File(savePath, fileName);
         Image image = new ImageIcon(imageFile.getAbsolutePath()).getImage();
-        if (image.getWidth(null) > 200 || image.getHeight(null) > 200) {
+        if (image.getWidth(null) > 1000 || image.getHeight(null) > 1000) {
             imageFile.delete();
             request.setAttribute("msg", "图片太大");
             return "f:/adminjsps/admin/book/add.jsp";
