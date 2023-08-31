@@ -2,13 +2,13 @@
 This is a Java web application for an online bookstore, built using **Tomcat**, **Servlet**, and **JSP**. Users can browse and select books to add to their cart, make payments, and manage their orders. The project also includes an admin management system to handle book category and books management, as well as order management.
 
 ## Images
-**User End**
+- **User End**
 
 <img width="769" alt="image" src="https://github.com/hk772400287/BookStore/assets/105110420/25791660-ac14-4054-bc96-0b4d98842bf7">
 
 
 
-**Admin Dashboard**
+- **Admin Dashboard**
 
 <img width="960" alt="image" src="https://github.com/hk772400287/BookStore/assets/105110420/9a9e8137-8532-461e-a8d8-21bbb3cf1de8">
 
